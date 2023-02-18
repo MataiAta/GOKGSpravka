@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Генератор справок-обоснований</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Генератор справок-обоснований</h1>
+    <form action="{{ url_for('generate') }}" method="post">
+      <label for="project_name">Название проекта:</label>
+      <input type="text" id="project_name" name="project_name" required>
+
+      <label for="input_text">Текст описания:</label>
+      <textarea id="input_text" name="input_text" required></textarea>
+
+      <input type="submit" value="Сгенерировать справку">
+    </form>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
