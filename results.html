@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Результаты генерации справки-обоснования</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Результаты генерации справки-обоснования</h1>
+    <p>Справка-обоснование для проекта "{{ project_name }}" была успешно сгенерирована.</p>
+    <p>Вы можете скачать справку-обоснование в формате Microsoft Word:</p>
+    <a href="{{ url_for('download', filename=filename) }}">Скачать справку</a>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
